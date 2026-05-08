@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معرض أعمال | نور الدين محمد</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #1b4332;
+            --secondary-color: #2d6a4f;
+            --accent-color: #d8f3dc;
+            --text-dark: #212529;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: #f8f9fa;
+            color: var(--text-dark);
+            line-height: 1.8;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            padding: 60px 20px;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .contact-bar {
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .contact-link {
+            background: var(--white);
+            color: var(--primary-color);
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.3s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .contact-link:hover {
+            transform: translateY(-3px);
+            background: var(--accent-color);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: -40px auto 40px;
+            padding: 0 20px;
+        }
+
+        section {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-right: 5px solid var(--secondary-color);
+            padding-right: 15px;
+            margin-bottom: 20px;
+        }
+
+        .info-item {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .info-item:hover {
+            background-color: #f1f8f5;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-badge {
+            background: var(--accent-color);
+            color: var(--primary-color);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.8rem; }
+            .contact-link { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>نور الدين محمد</h1>
+    <p>بكالوريوس العلوم في النبات والكيمياء</p>
+
+    <div class="contact-bar">
+        <a href="tel:+201069558418" class="contact-link">
+            <i class="fas fa-phone"></i> +201069558418
+        </a>
+
+        <a href="mailto:nourdonnia18@gmail.com" class="contact-link">
+            <i class="fas fa-envelope"></i> البريد الإلكتروني
+        </a>
+
+        <a href="https://www.linkedin.com/in/nour-mohamed-31144b266/" target="_blank" class="contact-link">
+            <i class="fab fa-linkedin"></i> لينكد إن
+        </a>
+    </div>
+</header>
+
+<div class="container">
+
+    <section>
+        <h2><i class="fas fa-graduation-cap"></i> التعليم</h2>
+        <div class="info-item">
+            <strong>كلية العلوم، جامعة الزقازيق</strong>
+            <p>بكالوريوس العلوم في النبات والكيمياء (2021 - 2025)</p>
+            <p>المعدل التراكمي (CGPA): 2.480</p>
+        </div>
+    </section>
+
+    <section>
+        <h2><i class="fas fa-flask"></i> الخبرة العملية</h2>
+        <div class="info-item">
+            <strong>تدريب زراعة الأنسجة - مختبر NRC</strong>
+            <p>المركز القومي للبحوث (Agriculture and Biological Research)</p>
+        </div>
+    </section>
+
+    <section>
+        <h2><i class="fas fa-microscope"></i> المشاريع والأبحاث</h2>
+        <div class="info-item">
+            <i class="fas fa-leaf"></i> بحث في النباتات الطبية
+        </div>
+        <div class="info-item">
+            <i class="fas fa-vial"></i> بحث حول تثبيت المعادن الثقيلة في المواد القلوية النشطة
+        </div>
+    </section>
+
+    <section>
+        <h2><i class="fas fa-language"></i> المهارات واللغات</h2>
+        <div class="skills-container">
+            <span class="skill-badge">اللغة العربية: لغة أم</span>
+            <span class="skill-badge">اللغة الإنجليزية: B2</span>
+            <span class="skill-badge">زراعة الأنسجة</span>
+            <span class="skill-badge">الكيمياء الحيوية</span>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    &copy; 2026 نور الدين محمد. جميع الحقوق محفوظة.
+</footer>
+
+</body>
+</html>
