@@ -1,196 +1,230 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>معرض أعمال | نور الدين محمد</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root {
-            --primary-color: #1b4332;
-            --secondary-color: #2d6a4f;
-            --accent-color: #d8f3dc;
-            --text-dark: #212529;
-            --white: #ffffff;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio | Nour Eldin Mohamed</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            background-color: #f8f9fa;
-            color: var(--text-dark);
-            line-height: 1.8;
-        }
+<style>
+:root {
+    --primary: #1b4332;
+    --secondary: #2d6a4f;
+    --accent: #d8f3dc;
+    --white: #fff;
+    --dark: #212529;
+}
 
-        header {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: var(--white);
-            padding: 60px 20px;
-            text-align: center;
-            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-        }
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f8f9fa;
+    color: var(--dark);
+}
 
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
+/* NAVBAR */
+nav {
+    position: sticky;
+    top: 0;
+    background: var(--primary);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
 
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
+nav h3 {
+    color: white;
+    margin: 0;
+}
 
-        .contact-bar {
-            margin-top: 25px;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
 
-        .contact-link {
-            background: var(--white);
-            color: var(--primary-color);
-            padding: 10px 20px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            transition: 0.3s;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
 
-        .contact-link:hover {
-            transform: translateY(-3px);
-            background: var(--accent-color);
-        }
+nav a:hover {
+    color: var(--accent);
+}
 
-        .container {
-            max-width: 900px;
-            margin: -40px auto 40px;
-            padding: 0 20px;
-        }
+/* HEADER */
+header {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 70px 20px;
+    text-align: center;
+}
 
-        section {
-            background: var(--white);
-            padding: 30px;
-            border-radius: 15px;
-            margin-bottom: 25px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-        }
+header h1 {
+    font-size: 2.7rem;
+}
 
-        h2 {
-            color: var(--primary-color);
-            border-right: 5px solid var(--secondary-color);
-            padding-right: 15px;
-            margin-bottom: 20px;
-        }
+.contact-bar {
+    margin-top: 20px;
+}
 
-        .info-item {
-            margin-bottom: 15px;
-            padding: 10px;
-            border-radius: 8px;
-        }
+.contact-bar a {
+    margin: 5px;
+    display: inline-block;
+    padding: 10px 20px;
+    background: white;
+    color: var(--primary);
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-        .info-item:hover {
-            background-color: #f1f8f5;
-        }
+/* CONTAINER */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
 
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
+section {
+    background: white;
+    margin: 20px 0;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
 
-        .skill-badge {
-            background: var(--accent-color);
-            color: var(--primary-color);
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
-        }
+h2 {
+    border-left: 5px solid var(--secondary);
+    padding-left: 10px;
+    color: var(--primary);
+}
 
-        footer {
-            text-align: center;
-            padding: 40px;
-            color: #666;
-            font-size: 0.9rem;
-        }
+/* SKILLS */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
 
-        @media (max-width: 600px) {
-            header h1 { font-size: 1.8rem; }
-            .contact-link { width: 100%; justify-content: center; }
-        }
-    </style>
+.skill {
+    background: var(--accent);
+    padding: 6px 15px;
+    border-radius: 20px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    color: gray;
+}
+</style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
+<nav>
+    <h3>Nour Portfolio</h3>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+    </ul>
+</nav>
+
+<!-- HEADER -->
 <header>
-    <h1>نور الدين محمد</h1>
-    <p>بكالوريوس العلوم في النبات والكيمياء</p>
+    <h1>Nour Eldin Mohamed</h1>
+    <p>Bachelor of Science in Botany & Chemistry</p>
 
     <div class="contact-bar">
-        <a href="tel:+201069558418" class="contact-link">
-            <i class="fas fa-phone"></i> +201069558418
-        </a>
-
-        <a href="mailto:nourdonnia18@gmail.com" class="contact-link">
-            <i class="fas fa-envelope"></i> البريد الإلكتروني
-        </a>
-
-        <a href="https://www.linkedin.com/in/nour-mohamed-31144b266/" target="_blank" class="contact-link">
-            <i class="fab fa-linkedin"></i> لينكد إن
-        </a>
+        <a href="tel:+201069558418"><i class="fas fa-phone"></i> Call</a>
+        <a href="mailto:nourdonnia18@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+        <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
     </div>
 </header>
 
 <div class="container">
 
-    <section>
-        <h2><i class="fas fa-graduation-cap"></i> التعليم</h2>
-        <div class="info-item">
-            <strong>كلية العلوم، جامعة الزقازيق</strong>
-            <p>بكالوريوس العلوم في النبات والكيمياء (2021 - 2025)</p>
-            <p>المعدل التراكمي (CGPA): 2.480</p>
-        </div>
-    </section>
+<!-- ABOUT -->
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        I am a highly motivated graduate specializing in Botany and Chemistry with a strong passion for scientific research and laboratory work.
+        Throughout my academic journey, I have developed a deep understanding of plant biology, chemical analysis, and experimental techniques.
+    </p>
+    <p>
+        I am particularly interested in biotechnology, environmental science, and applied research. I enjoy working in structured environments
+        where I can contribute to meaningful scientific outcomes while continuously improving my technical and analytical skills.
+    </p>
+</section>
 
-    <section>
-        <h2><i class="fas fa-flask"></i> الخبرة العملية</h2>
-        <div class="info-item">
-            <strong>تدريب زراعة الأنسجة - مختبر NRC</strong>
-            <p>المركز القومي للبحوث (Agriculture and Biological Research)</p>
-        </div>
-    </section>
+<!-- EDUCATION -->
+<section id="education">
+    <h2>Education</h2>
+    <p><strong>Zagazig University – Faculty of Science</strong></p>
+    <p>Bachelor’s Degree in Botany & Chemistry (2021 – 2025)</p>
+    <p>CGPA: 2.48</p>
+    <p>
+        During my studies, I gained hands-on experience in laboratory techniques, plant tissue culture, and chemical experimentation.
+        I also developed strong research and documentation skills through academic projects and assignments.
+    </p>
+</section>
 
-    <section>
-        <h2><i class="fas fa-microscope"></i> المشاريع والأبحاث</h2>
-        <div class="info-item">
-            <i class="fas fa-leaf"></i> بحث في النباتات الطبية
-        </div>
-        <div class="info-item">
-            <i class="fas fa-vial"></i> بحث حول تثبيت المعادن الثقيلة في المواد القلوية النشطة
-        </div>
-    </section>
+<!-- EXPERIENCE -->
+<section id="experience">
+    <h2>Experience</h2>
+    <p><strong>Plant Tissue Culture Training – NRC Laboratory</strong></p>
+    <p>
+        I completed a practical training program at the National Research Center, where I worked on plant tissue culture techniques.
+        This included sterilization processes, media preparation, and monitoring plant growth under controlled conditions.
+    </p>
+    <p>
+        The experience enhanced my laboratory discipline, attention to detail, and understanding of biological systems in controlled environments.
+    </p>
+</section>
 
-    <section>
-        <h2><i class="fas fa-language"></i> المهارات واللغات</h2>
-        <div class="skills-container">
-            <span class="skill-badge">اللغة العربية: لغة أم</span>
-            <span class="skill-badge">اللغة الإنجليزية: B2</span>
-            <span class="skill-badge">زراعة الأنسجة</span>
-            <span class="skill-badge">الكيمياء الحيوية</span>
-        </div>
-    </section>
+<!-- PROJECTS -->
+<section id="projects">
+    <h2>Projects & Research</h2>
+    <p>
+        <strong>Medicinal Plants Research:</strong> Conducted research on the benefits and chemical composition of medicinal plants,
+        focusing on their potential applications in healthcare and treatment.
+    </p>
+    <p>
+        <strong>Heavy Metals Stabilization Study:</strong> Investigated methods of stabilizing heavy metals in alkaline-activated materials,
+        contributing to environmental sustainability and pollution reduction.
+    </p>
+    <p>
+        These projects helped me strengthen my research methodology, data analysis, and scientific writing skills.
+    </p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+    <h2>Skills & Languages</h2>
+    <div class="skills">
+        <span class="skill">Arabic (Native)</span>
+        <span class="skill">English (B2)</span>
+        <span class="skill">Plant Tissue Culture</span>
+        <span class="skill">Biochemistry</span>
+        <span class="skill">Laboratory Skills</span>
+        <span class="skill">Research & Analysis</span>
+    </div>
+</section>
 
 </div>
 
 <footer>
-    &copy; 2026 نور الدين محمد. جميع الحقوق محفوظة.
+    © 2026 Nour Eldin Mohamed. All rights reserved.
 </footer>
 
 </body>
